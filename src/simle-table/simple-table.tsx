@@ -42,7 +42,17 @@ export default function SimpleTable<T>({ data }: SimpleTableProps<T>) {
   });
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "#0A1B25",
+        borderRadius: 15,
+        border: "1px solid #242836",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        textAlign: "center",
+      }}
+    >
       <table style={{ width: "100%" }}>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
