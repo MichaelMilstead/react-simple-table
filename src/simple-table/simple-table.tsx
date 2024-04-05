@@ -12,11 +12,17 @@ import SearchBox from "./search-box/search-box";
 export interface SimpleTableProps<T> {
   data: T[];
   showFilter?: boolean;
+  backgroundColor?: string;
+  borderRadius?: number;
+  border?: string;
 }
 
 export default function SimpleTable<T>({
   data,
   showFilter = true,
+  backgroundColor = "#0A1B25",
+  borderRadius = 15,
+  border = "1px solid #242836",
 }: SimpleTableProps<T>) {
   const [globalFilter, setGlobalFilter] = useState("");
 
@@ -57,14 +63,20 @@ export default function SimpleTable<T>({
         }}
       >
         {showFilter && (
-          <SearchBox filter={globalFilter} setFilter={setGlobalFilter} />
+          <SearchBox
+            filter={globalFilter}
+            setFilter={setGlobalFilter}
+            backgroundColor={backgroundColor}
+            borderRadius={borderRadius}
+            border={border}
+          />
         )}
       </div>
       <div
         style={{
-          backgroundColor: "#0A1B25",
-          borderRadius: 15,
-          border: "1px solid #242836",
+          backgroundColor: backgroundColor,
+          borderRadius: borderRadius,
+          border: border,
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-start",

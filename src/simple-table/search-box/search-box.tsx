@@ -3,9 +3,18 @@ import React from "react";
 interface SearchBoxProps {
   filter: string;
   setFilter: (filter: string) => void;
+  backgroundColor: string;
+  borderRadius: number;
+  border: string;
 }
 
-export default function SearchBox({ filter, setFilter }: SearchBoxProps) {
+export default function SearchBox({
+  filter,
+  setFilter,
+  backgroundColor,
+  borderRadius,
+  border,
+}: SearchBoxProps) {
   return (
     <div className="search-box">
       <input
@@ -15,10 +24,9 @@ export default function SearchBox({ filter, setFilter }: SearchBoxProps) {
         style={{
           padding: 5,
           paddingLeft: 10,
-          borderRadius: 12,
-          color: "white",
-          backgroundColor: "#0A1B25",
-          border: "1px solid #242836",
+          borderRadius: borderRadius,
+          backgroundColor: backgroundColor,
+          border: border,
         }}
       />
     </div>
