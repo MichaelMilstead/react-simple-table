@@ -1,4 +1,4 @@
 "use client";
-import Component from "./src/component-name/component";
+import SimpleTable from "./simle-table/simple-table";
 
-export default Component;
+export default SimpleTable;
