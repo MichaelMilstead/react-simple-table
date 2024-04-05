@@ -1,5 +1,5 @@
 {
-  "name": "component-package-template",
+  "name": "react-simple-table",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/MichaelMilstead/react-simple-table"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/MichaelMilstead/react-simple-table/issues"
   },
   "keywords": [],
   "author": "Michael Milstead",
