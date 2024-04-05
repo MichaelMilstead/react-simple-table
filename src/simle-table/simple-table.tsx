@@ -1,5 +1,4 @@
 import {
-  ColumnDef,
   createColumnHelper,
   flexRender,
   getCoreRowModel,
@@ -11,19 +10,15 @@ import React, { useState } from "react";
 
 export interface SimpleTableProps<T> {
   data: T[];
-  customColumns?: ColumnDef<T, any>[]; // Array of custom column definitions
 }
 
-export default function SimpleTable<T>({
-  data,
-  customColumns = [],
-}: SimpleTableProps<T>) {
+export default function SimpleTable<T>({ data }: SimpleTableProps<T>) {
   const [globalFilter, setGlobalFilter] = useState("");
 
   const columnHelper = createColumnHelper<T>();
   const generateColumns = (dataSample: any) => {
     return Object.keys(dataSample).map((dataField) =>
-      columnHelper.accessor((row: any) => row, {
+      columnHelper.accessor((row: any) => row[dataField], {
         header: dataField,
       })
     );
@@ -31,10 +26,8 @@ export default function SimpleTable<T>({
 
   const autoColumns = data.length > 0 ? generateColumns(data[0]) : [];
 
-  const mergedColumns = customColumns.length > 0 ? customColumns : autoColumns;
-
   const table = useReactTable({
-    columns: mergedColumns,
+    columns: autoColumns,
     data,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
