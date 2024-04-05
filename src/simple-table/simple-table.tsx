@@ -15,6 +15,8 @@ export interface SimpleTableProps<T> {
   backgroundColor?: string;
   borderRadius?: number;
   border?: string;
+  height?: number | string;
+  width?: number | string;
 }
 
 export default function SimpleTable<T>({
@@ -23,6 +25,8 @@ export default function SimpleTable<T>({
   backgroundColor = "#0A1B25",
   borderRadius = 15,
   border = "1px solid #242836",
+  height = "auto",
+  width = "auto",
 }: SimpleTableProps<T>) {
   const [globalFilter, setGlobalFilter] = useState("");
 
@@ -53,7 +57,7 @@ export default function SimpleTable<T>({
   });
 
   return (
-    <>
+    <div style={{ width: width, height: height }}>
       <div
         style={{
           display: "flex",
@@ -81,6 +85,8 @@ export default function SimpleTable<T>({
           justifyContent: "center",
           alignItems: "flex-start",
           textAlign: "center",
+          height: "100%",
+          width: "100%",
         }}
       >
         <table style={{ width: "100%" }}>
@@ -135,6 +141,6 @@ export default function SimpleTable<T>({
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
