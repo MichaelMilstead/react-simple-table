@@ -1,13 +1,13 @@
 {
   "name": "react-simple-table",
   "version": "0.0.1",
-  "description": "",
+  "description": "A simple table component for React",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp src/simple-table/simple-table.css dist/simple-table/simple-table.css",
     "test": "jest"
   },
   "repository": {

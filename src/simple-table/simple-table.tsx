@@ -8,6 +8,7 @@ import {
 } from "@tanstack/react-table";
 import React, { useState } from "react";
 import SearchBox from "./search-box/search-box";
+import "./simple-table.css";
 
 export interface SimpleTableProps<T> {
   data: T[];
@@ -87,7 +88,9 @@ export default function SimpleTable<T>({
           textAlign: "center",
           height: "100%",
           width: "100%",
+          overflow: "auto",
         }}
+        className="simple-scrollbar"
       >
         <table style={{ width: "100%" }}>
           <thead>

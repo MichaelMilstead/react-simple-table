@@ -1,0 +1,20 @@
+.simple-scrollbar {
+  scrollbar-width: unset;
+  scrollbar-color: unset;
+}
+
+::-webkit-scrollbar {
+  padding: 5px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border: 4px solid rgba(0,0,0,0);
+  background-clip: padding-box;
+  border-radius: 6px;
+}
