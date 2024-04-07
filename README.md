@@ -1,4 +1,4 @@
-# Simple React Table
+# React Minimal Table
 
 A table component for React that utilizes `@tanstack/react-table`, but removes most options for simplicity. Just pass in a list of objects to get a table with search functionality.
 
@@ -7,7 +7,7 @@ A table component for React that utilizes `@tanstack/react-table`, but removes m
 ## Installation
 
 ```shell
-npm i react-simple-table
+npm i react-minimal-table
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm i react-simple-table
 Import and use the SimpleTable component, passing in your data and any optional configuration props.
 
 ```typescript
-import SimpleTable from "your-simple-table-package-name";
+import SimpleTable from "react-minimal-table";
 
 function App() {
   const data = [

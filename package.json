@@ -1,5 +1,5 @@
 {
-  "name": "react-simple-table",
+  "name": "react-minimal-table",
   "version": "1.0.1",
   "description": "A simple table component for React",
   "main": "dist/index.js",
