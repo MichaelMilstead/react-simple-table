@@ -1,14 +1,13 @@
 {
   "name": "react-simple-table",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "A simple table component for React",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc && cp src/simple-table/simple-table.css dist/simple-table/simple-table.css",
-    "test": "jest"
+    "build": "tsc && cp src/simple-table/simple-table.css dist/simple-table/simple-table.css"
   },
   "repository": {
     "type": "git",
@@ -17,14 +16,16 @@
   "bugs": {
     "url": "https://github.com/MichaelMilstead/react-simple-table/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "table",
+    "simple",
+    "component"
+  ],
   "author": "Michael Milstead",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^29.5.12",
     "@types/node": "^20.11.14",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.1.2",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
